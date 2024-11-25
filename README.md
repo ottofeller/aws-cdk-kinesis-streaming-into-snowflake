@@ -1,0 +1,1 @@
+# aws-cdk-kinesis-streaming-into-snowflake
