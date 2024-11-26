@@ -1,10 +1,9 @@
 # Streaming real-time data into Snowflake using Kinesis Streams
 
-We will create an AWS CDK stack that will stream data into a Snowflake table using Kinesis Streams and Kinesis Data Firehose. This solution will allow to ingest data from different accounts and regions into a Snowflake table in real-time.
-
+Example of the AWS CDK Application described in our [blog post](https://ottofeller.com/blog/streaming-real-time-data-into-snowflake-using-kinesis-streams). The application includes СFN stack and all the resources needed to stream data into a Snowflake table using Kinesis Streams and Kinesis Data Firehose.
 ## Snowflake setup
 
-We will need a Snowflake user with permissions to insert data into the table. We will also need to configure key pair authentication for the user. Follow [this guide](https://docs.snowflake.com/en/user-guide/key-pair-auth#configuring-key-pair-authentication), it should be relatively simple.
+To ensure connection to Snowflake you need a Snowflake user with permissions to insert data into the table and also need to configure key pair authentication for the user. Follow [this guide](https://docs.snowflake.com/en/user-guide/key-pair-auth#configuring-key-pair-authentication), it should be relatively simple.
 
 Next, create a secret in AWS Secrets Manager containing this private key. This secret will be used by the Kinesis Data Firehose delivery stream to authenticate with Snowflake.
 
